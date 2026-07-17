@@ -111,6 +111,11 @@ Read these when you reach the phase that needs them — not upfront.
 - **`references/operating-lessons.md`** — what goes wrong once the thing is running: false proof,
   cache and staleness traps, cost control. Read when writing the docs in phase 8, and when a
   sandbox is behaving strangely.
+- **`references/worked-example.md`** — one real build, concrete: the Procpane service graph with its
+  health checks and dependency ordering, the integration policy as actually decided, seed radii,
+  a good app-code seam, workspace mode, and what a full-stack sandbox does to bundler memory. Read
+  it during design when the abstractions above need grounding — but run your own discovery rather
+  than copying the topology.
 
 ## Quality bar
 
