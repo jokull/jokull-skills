@@ -22,10 +22,9 @@ source of truth — a `git pull` updates the installed skills, and edits are liv
 ## Notes
 
 **`roundtable`** pairs with `/grill-me`: grill your idea into existence, then run it through the
-roundtable to bulletproof it. Adapted from a `roundtable-review` skill shared publicly; the core
-idea — a council of specialist seats, synthesized rather than concatenated — is theirs. The change
-here is that seats run as genuinely independent parallel subagents instead of sequential passes in
-one context, so the critiques can't anchor on each other.
+roundtable to bulletproof it. Descended from the `roundtable-review` skill I wrote in a work
+monorepo; the change here is that seats run as genuinely independent parallel subagents instead of
+sequential passes in one context, so the critiques can't anchor on each other.
 
 **`mole`** keeps its memory at `~/.local/state/mole-skill/memory.md`, outside the skill directory
 on purpose — the skill is shareable, but the verdicts name one machine's repos and databases. It
