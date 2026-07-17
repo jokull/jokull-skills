@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender Product Render"
+  short_description: "Build evidence-led procedural Blender products"
+  default_prompt: "Use $blender-product-render to build an editable industrial product model and verify its final renders."

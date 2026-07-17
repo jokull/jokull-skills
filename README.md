@@ -5,6 +5,7 @@ Claude Code, Codex, and other harnesses that read `~/.agents/skills/`.
 
 | Skill | What it's for |
 |---|---|
+| [`blender-product-render`](skills/blender-product-render/SKILL.md) | Evidence-led industrial product modeling and rendering in Blender: deterministic `bpy`, physical materials, editable source objects, reference comparisons, and verified `.blend`/PNG delivery. |
 | [`roundtable`](skills/roundtable/SKILL.md) | Adversarial council review of a plan or spec. Independent specialist seats, run in parallel, synthesized into a patched artifact. |
 | [`sandbox-builder`](skills/sandbox-builder/SKILL.md) | Design and build an agent sandbox for a monorepo: a disposable per-worktree runtime where agents get a browser, seeded scenarios, x-ray visibility, and honest evidence. |
 | [`gh-pr-image`](skills/gh-pr-image/SKILL.md) | Embed local screenshots and GIFs in a GitHub PR without committing image artifacts, using a per-PR prerelease as a durable image host. |
