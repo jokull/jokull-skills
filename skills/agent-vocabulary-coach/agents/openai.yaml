@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Vocabulary Coach"
+  short_description: "Build precise language for steering agents"
+  default_prompt: "Use $agent-vocabulary-coach to find the next useful wave of engineering vocabulary for steering my coding agents."
