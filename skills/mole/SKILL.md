@@ -3,6 +3,8 @@ name: mole
 description: "Wraps the `mo` (mole) Mac cleanup CLI with judgment, memory, and follow-through: runs dry-run previews, curates them against remembered safe/risky verdicts for this machine, recalls past sessions and past user decisions, and brainstorms prune targets mole itself doesn't scan. Use when the user asks to free up disk space, clean the Mac, run mole or mo, or prune old project build artifacts."
 compatibility: Requires macOS and the `mo` CLI (github.com/tw93/mole). Install with `brew install tw93/tap/mole`.
 license: MIT
+metadata:
+  author: jokull
   version: "1.1"
 ---
 
