@@ -3,8 +3,43 @@ name: mole
 description: "Wraps the `mo` (mole) Mac cleanup CLI with judgment, memory, and follow-through: runs dry-run previews, curates them against remembered safe/risky verdicts for this machine, recalls past sessions and past user decisions, and brainstorms prune targets mole itself doesn't scan. Use when the user asks to free up disk space, clean the Mac, run mole or mo, or prune old project build artifacts."
 compatibility: Requires macOS and the `mo` CLI (github.com/tw93/mole). Install with `brew install tw93/tap/mole`.
 license: MIT
-metadata:
-  author: jokull
+  version: "1.1"
+---
+
+# Mole
+
+`mo` finds and deletes things. This skill is the judgment layer on top: which of those things are
+worth deleting *on this machine*, and a memory of what happened so each run starts smarter than the
+last.
+
+Never run a real (non-dry-run) command without the user approving that specific bucket first.
+Dry-runs are free.
+
+## Pitfalls (learned the hard way)
+
+- **VM-backed "container data" sizes are logical, not allocated.** When mole flags Docker/OrbStack
+  data (e.g. "OrbStack container data · 59.38GB"), the number comes from `docker system df` and
+  counts layer/virtual sizes. Real disk footprint lives in a sparse APFS disk image and can be far
+  smaller. Check `du -sh` on the runtime's actual data dir; report both numbers, never promise the
+  logical figure as reclaimable.
+- **Find the runtime's data dir — don't trust the dotdir.** OrbStack's live data is
+  `~/Library/Group Containers/<bundle-id>/data` (e.g. `HUAQ24HBR6.dev.orbstack`), not `~/.orbstack`
+  (that may be legacy config with a sparse leftover image). Docker Desktop uses
+  `~/Library/Containers/com.docker.docker/Data`. Verify where the VM image actually lives before
+  sizing or deleting.
+- **Never `docker volume prune` blindly.** Unused volumes include real local dev databases
+  (postgres data, supabase, etc.). Remove only named or prefix-scoped volumes
+  (`docker volume ls | grep '^prefix-' | xargs docker volume rm`). Volumes in use by running
+  containers fail with "volume is in use" — that's correct, leave them; never force-remove.
+- **`mo analyze` and `mo clean --dry-run` can hang or take very long headless.** When they stall,
+  fall back to targeted scans: `du -hd 1 ~/Library ~/Code ~/.cache | sort -rh | head -20`. Note BSD
+  `du` rejects `-s` together with `-d` (usage error) — use `-hd N` alone. Real `mo purge`/`mo clean`
+  runs take minutes on large homes — background them.
+- **Package-manager homes mix cache with real state.** `~/Library/pnpm` holds both the store and
+  global CLI installs (`bin/`, `global/`) — delete the `store/` subdir only, keep the parent. Same
+  shape for other managers that install global tools.
+
+## Memory
   version: "1.0"
 ---
 
