@@ -11,6 +11,7 @@ Claude Code, Codex, and other harnesses that read `~/.agents/skills/`.
 | [`gh-pr-image`](skills/gh-pr-image/SKILL.md) | Embed local screenshots and GIFs in a GitHub PR without committing image artifacts, using a per-PR prerelease as a durable image host. |
 | [`blender-product-render`](skills/blender-product-render/SKILL.md) | Product renders and 3D asset exports by scripting Blender headlessly — the `.blend` is an output, not a source. |
 | [`mole`](skills/mole/SKILL.md) | Judgment and memory on top of the [`mo`](https://github.com/tw93/mole) Mac cleanup CLI. Dry-run first, curate, remember the verdicts. |
+| [`message-local-codex`](skills/message-local-codex/SKILL.md) | Find and message local Codex sessions through Superset workspaces or session IDs, with return addresses and bounded replies. |
 
 ## Install
 
