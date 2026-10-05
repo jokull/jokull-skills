@@ -11,6 +11,8 @@ Claude Code, Codex, and other harnesses that read `~/.agents/skills/`.
 | [`blender-product-render`](skills/blender-product-render/SKILL.md) | Product renders and 3D asset exports by scripting Blender headlessly — the `.blend` is an output, not a source. |
 | [`mole`](skills/mole/SKILL.md) | Judgment and memory on top of the [`mo`](https://github.com/tw93/mole) Mac cleanup CLI. Dry-run first, curate, remember the verdicts. |
 | [`message-local-codex`](skills/message-local-codex/SKILL.md) | Find and message local Codex sessions through Superset workspaces or session IDs, with return addresses and bounded replies. |
+| [`migrate-to-cf`](skills/migrate-to-cf/SKILL.md) | Move a Workers project from Wrangler config to the `cf` CLI and `cloudflare.config.ts`: codemod, parity table, dry-run verification, nothing deployed. |
+| [`memory-retro`](skills/memory-retro/SKILL.md) | A retro for what the agent remembers: check saved memories against the environment, fix what evidence settles, and reconcile conflicts with you one decision at a time. |
 
 ## Install
 
