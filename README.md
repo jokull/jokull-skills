@@ -13,6 +13,7 @@ Claude Code, Codex, and other harnesses that read `~/.agents/skills/`.
 | [`message-local-codex`](skills/message-local-codex/SKILL.md) | Find and message local Codex sessions through Superset workspaces or session IDs, with return addresses and bounded replies. |
 | [`migrate-to-cf`](skills/migrate-to-cf/SKILL.md) | Move a Workers project from Wrangler config to the `cf` CLI and `cloudflare.config.ts`: codemod, parity table, dry-run verification, nothing deployed. |
 | [`memory-retro`](skills/memory-retro/SKILL.md) | A retro for what the agent remembers: check saved memories against the environment, fix what evidence settles, and reconcile conflicts with you one decision at a time. |
+| [`blitz`](skills/blitz/SKILL.md) | Clear a backlog in one push: inventory open PRs and issues, grill for product decisions, decide the engineering ones, then land worker output as a few large roll-up PRs. |
 
 ## Install
 
